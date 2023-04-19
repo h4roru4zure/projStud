@@ -9,7 +9,9 @@ app.use('/img',express.static(__dirname +'public/img'));
 app.use('/js',express.static(__dirname +'public/js'));
 
 //template Engine
+//set  the path value of the views to the ./src/views
 app.set('views','./src/views');
+//setting the render for view engine to ejs 
 app.set('view engine','ejs');
 
 //Routes 

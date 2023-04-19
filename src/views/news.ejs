@@ -8,6 +8,28 @@
     <title>NodeJS </title>
 </head>
 <body>
-    <h1>Nodejs News</h1>
-</body>
+    <div class="container">
+      <h1>Nodejs News "La Liga" Spain</h1>
+      <% teams.forEach(function (obj, index){ %>
+      <table>
+        <tr>
+          <td>
+            <p><%= index + 1 %> - <%=obj.team.name%></p>
+            <p><%=obj.team.founded%></p>
+            <p><%=obj.venue.name%></p>
+            <p><%=obj.venue.city%></p>
+          </td>
+          <td>
+            <img src="<%=obj.venue.image%>" alt="<%=obj.venue.name%>" width="250">
+          </td>
+          <td>
+            <img src="<%=obj.team.logo%>" alt="<%=obj.team.name%>">
+          </td>
+        </tr>
+      </table>
+      <%}) %>
+    </div>
+  </body>
+  
+  
 </html>
